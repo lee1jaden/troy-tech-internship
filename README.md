@@ -15,6 +15,12 @@
 
 This project was completed from June 1, 2021 to July 2, 2021 to fulfill the 150 hour requirement of the Troy Tech Internship. The ideas were provided by Tushar Puri, the CEO of Pegasus One Software based in Fullerton, CA. Most work was done independently and has been uploaded to GitHub with improvements. The program itself implements a machine learning model to identify handwritten characters from the MNIST Database and progresses into attempting to identify text in more natural environments such as address numbers on the siding of a house and entire handwritten words.
 
+### Order of Implementation
+
+1. Letters
+1. House Numbers
+1. Words
+
 ### References
 
 None so far.
