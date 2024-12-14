@@ -1,0 +1,6 @@
+# Numpy
+# Matplotlib
+# Pandas
+# Keras
+# Jupyter
+# CV2
