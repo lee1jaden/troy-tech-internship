@@ -34,4 +34,6 @@ All datasets are expected to be placed in the top-level _/data_ folder. All comm
 
 After building each model, see the console for the results of running the model against a random testing dataset.
 
-To visualize the results, ...
+To visualize the results, run a specific Make command after the corresponding model is saved.
+
+1. Handwritten Character Recognition: `make char-plot`

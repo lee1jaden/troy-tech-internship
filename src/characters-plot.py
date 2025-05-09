@@ -23,12 +23,12 @@ def index_to_letter(index: int) -> str:
 # Display test images with their predictions.
 print("Producing plots...")
 fig, axes = plt.subplots(3, 4)
-axes = axes.flatten()
-for i, ax in enumerate(axes):
+for i, ax in enumerate(axes.flatten()):
     chart: Axes = ax
     img = images.iloc[i].to_numpy().reshape((28, 28))
     chart.imshow(img, cmap="Greys")
     prediction = index_to_letter(np.argmax(probabilities[i]))
-    chart.set_title(f"Prediction: {prediction}")
-    chart.grid()
+    actual = index_to_letter(labels.iloc[i])
+    chart.set_title(f"Prediction: {prediction}\nActual: {actual}")
+    chart.set_axis_off()
 plt.savefig("./examples/characters.png")
