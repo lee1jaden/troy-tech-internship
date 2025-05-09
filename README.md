@@ -15,26 +15,13 @@
 
 This project was completed from June 1, 2021 to July 2, 2021 to fulfill the 150 hour requirement of the Troy Tech Internship. The ideas were provided by Tushar Puri, the CEO of Pegasus One Software based in Fullerton, CA. Most work was done independently and has been uploaded to GitHub with improvements. The program itself implements a machine learning model to identify handwritten characters from the MNIST Database and progresses into attempting to identify text in more natural environments such as address numbers on the siding of a house and entire handwritten words.
 
-### Order of Implementation
-
-1. Letters
-1. House Numbers
-1. Words
-
-### References
-
-None so far.
-
 ## Running the Project
 
 ### Installation
 
-All code was written using VS Code, so the setup instructions and workspace settings will be geared towards that.
+The setup instructions assume the code can be run from the dev container described in the repository. This can be done using Docker Desktop and VS Code with the _Dev Containers_ extension. This will build a container with the necessary dependencies to begin the project.
 
-1. Install Docker Desktop and VS Code to your computer.
-1. Clone this repository in VS Code.
-1. Install the 'Dev Containers' extension for VS Code.
-1. Reopen the folder in a dev container by navigating to the search bar and entering `> Dev Containers: Reopen in Container`. This should build a container with the necessary dependencies, VS Code extensions, and VS Code settings to run the project.
+Add a Python virtual environment at the top level of the project and install the dependencies listed in the _requirements.txt_ file.
 
 ### Instructions
 

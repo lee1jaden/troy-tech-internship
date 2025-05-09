@@ -1,6 +1,8 @@
-# Numpy
-# Matplotlib
-# Pandas
-# Keras
-# Jupyter
-# CV2
+numpy==1.26.4
+matplotlib==3.8.4
+pandas==2.2.2
+keras==3.3.3
+jupyter==1.0.0
+opencv-python==4.9.0.80
+tensorflow=2.19.0
+scikit-learn=1.6.1

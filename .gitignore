@@ -1,2 +1,11 @@
+# Python Environment
+.venv
+
 # Model Files
-.h5
+models/*
+
+# Datasets
+data/*
+
+# Experimental Sandbox File
+sandbox.py
