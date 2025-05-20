@@ -11,8 +11,11 @@ def main():
     # Import and sample the data.
     print("Importing data...")
     (train_images, train_labels), (test_images, test_labels) = mnist.load_data()
-    images = test_images[:12]
-    labels = test_labels[:12]
+    sample = np.random.choice(
+        np.arange(0, test_labels.shape[0]), size=12, replace=False
+    )
+    images = test_images[sample]
+    labels = test_labels[sample]
 
     # Predict the letters using the model.
     print("Loading model...")
