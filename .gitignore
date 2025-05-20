@@ -1,5 +1,6 @@
 # Python Environment
 .venv
+src/__pycache__
 
 # Model Files
 models/*

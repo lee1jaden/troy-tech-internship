@@ -25,9 +25,9 @@ Add a Python virtual environment at the top level of the project and install the
 
 ### Instructions
 
-All datasets are expected to be placed in the top-level _/data_ folder. All commands should be run from the top-level directory using Make.
+All datasets are expected to be placed in the top-level _/data_ folder without renaming from the downloaded versions. All commands should be run from the top-level directory using Make.
 
-1. Handwritten Character Recognition: The images are 28 by 28 and represented as flattened grayscale values in a CSV dataset. [Download here](https://www.kaggle.com/datasets/sachinpatel21/az-handwritten-alphabets-in-csv-format). Open a terminal and run `make char-model` to save the weights of the model. It may take a few minutes, and it should reach up to 96% accuracy.
+1. Handwritten Character Recognition: The images are 28x28 pixels and represented as flattened grayscale values in a CSV dataset. [Download here](https://www.kaggle.com/datasets/sachinpatel21/az-handwritten-alphabets-in-csv-format). Open a terminal and run `make char-model` to build a model that can predict handwritten characters at 96% accuracy. It may take a few minutes. Conversely, create a convolutional model with command `make char-model-cnn` that reaches up to 98.5% accuracy.
 1. Handwritten Digit Recognition: (not completed)
 1. Handwritten Word Recognition: (not completed)
 1. House Number Recognition: (not completed)
@@ -36,4 +36,4 @@ After building each model, see the console for the results of running the model 
 
 To visualize the results, run a specific Make command after the corresponding model is saved.
 
-1. Handwritten Character Recognition: `make char-plot`
+1. Handwritten Character Recognition: `make char-plot` or `make char-plot-cnn` depending on the model you intend to use.
