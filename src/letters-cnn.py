@@ -47,7 +47,7 @@ def main():
         train_images, utils.to_categorical(train_labels), epochs=3, batch_size=512
     )
     model.summary()
-    model.save("./models/characters-cnn.keras")
+    model.save("./models/letters-cnn.keras")
 
     # Display metrics for the model.
     print("Evaluating network...")

@@ -1,16 +1,16 @@
 MODEL=n/a
 
-char-model:
-	python3 src/characters.py
+letters-model:
+	python3 src/letters.py
 
-char-plot:
-	python3 src/characters-plot.py
+letters-plot:
+	python3 src/letters-plot.py
 
-char-model-cnn:
-	python3 src/characters-cnn.py
+letters-model-cnn:
+	python3 src/letters-cnn.py
 
-char-plot-cnn:
-	python3 src/characters-cnn-plot.py
+letters-plot-cnn:
+	python3 src/letters-cnn-plot.py
 
 digits-model:
 	python3 src/digits.py

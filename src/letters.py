@@ -29,7 +29,7 @@ def main():
     model.fit(
         train_images, utils.to_categorical(train_labels), epochs=5, batch_size=128
     )
-    model.save("./models/characters.keras")
+    model.save("./models/letters.keras")
 
     # Display metrics for the model.
     print("Evaluating network...")
