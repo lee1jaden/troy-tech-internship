@@ -27,16 +27,18 @@ Add a Python virtual environment at the top level of the project and install the
 
 All datasets are expected to be placed in the top-level _/data_ folder without renaming from the downloaded versions. All commands should be run from the top-level directory using Make.
 
-1. Handwritten Letter Recognition: The images are 28x28 pixels and represented as flattened grayscale values in a CSV dataset. [Download here](https://www.kaggle.com/datasets/sachinpatel21/az-handwritten-alphabets-in-csv-format). Open a terminal and run `make letters-model` to build a model that can predict handwritten letters at 96% accuracy. It may take a few minutes. Conversely, create a convolutional model with command `make letters-model-cnn` that reaches up to 98.5% accuracy.
-1. Handwritten Digit Recognition: The images adhere to the same convention as the handwritten character recognition images and are downloaded from a dataset included in the Keras library. To train a neural network to identify them, run `make digits-model`.
-1. Handwritten Character Recognition: The letter and digit datasets are concatenated to form one handwritten character set. Running `make chars-model` will produce a model that can accurately distinguish a given character 97% of the time.
+1. Handwritten Letter Recognition: The images are 28x28 pixels and represented as flattened grayscale values in a CSV dataset. [Download here](https://www.kaggle.com/datasets/sachinpatel21/az-handwritten-alphabets-in-csv-format). Open a terminal and run `make build DATA=letters` to build a model that can predict handwritten letters at 96% accuracy. It may take a few minutes. Conversely, create a convolutional model with command `make build DATA=letters-cnn` that reaches up to 98.5% accuracy.
+1. Handwritten Digit Recognition: The images adhere to the same convention as the handwritten character recognition images and are downloaded from a dataset included in the Keras library. To train a neural network to identify them, run `make build DATA=digits`.
+1. Handwritten Character Recognition: The letter and digit datasets are concatenated to form one handwritten character set. Running `make build DATA=chars` will produce a model that can accurately distinguish a given character 97% of the time.
 1. Handwritten Word Recognition: (not completed)
 1. House Number Recognition: (not completed)
 
 After building each model, see the console for the results of running the model against a random testing dataset.
 
-To visualize the results on a random sample, run a specific Make command after the corresponding model is saved.
+To visualize the results on a random sample, run a specific Make command and view the produced image file in the _/examples_ folder. The associated model will automatically be trained and saved to the _/models_ folder if not previously done.
 
-1. Handwritten Letter Recognition: `make letters-plot` or `make letters-plot-cnn` depending on the model you intend to use.
-1. Handwritten Digit Recognition: `make digits-plot`
-1. Handwritten Character Recognition: `make chars-plot`
+1. Handwritten Letter Recognition: `make plot DATA=letters` or `make plot DATA=letters-cnn` depending on the model you intend to use.
+1. Handwritten Digit Recognition: `make plot DATA=digits`
+1. Handwritten Character Recognition: `make plot DATA=chars`
+
+Note: Any `make build` or `make plot` command that does not specify the DATA field will cause an error.
