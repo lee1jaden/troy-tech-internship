@@ -12,6 +12,12 @@ char-model-cnn:
 char-plot-cnn:
 	python3 src/characters-cnn-plot.py
 
+digits-model:
+	python3 src/digits.py
+
+digits-plot:
+	python3 src/digits-plot.py
+
 clean-models:
 	rm -fr models/* 
 	
