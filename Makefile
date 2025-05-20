@@ -18,6 +18,12 @@ digits-model:
 digits-plot:
 	python3 src/digits-plot.py
 
+chars-model:
+	python3 src/characters.py
+
+chars-plot:
+	python3 src/characters-plot.py
+
 clean-models:
 	rm -fr models/* 
 	
