@@ -27,7 +27,7 @@ Add a Python virtual environment at the top level of the project and install the
 
 All datasets are expected to be placed in the top-level _/data_ folder. All commands should be run from the top-level directory using Make.
 
-1. Handwritten Character Recognition: The images are 28 by 28 and represented as flattened grayscale values in a CSV dataset. [Download here](https://www.kaggle.com/datasets/sachinpatel21/az-handwritten-alphabets-in-csv-format). Open a terminal and run `make char-model` to save the weights of the model. It may take a few minutes.
+1. Handwritten Character Recognition: The images are 28 by 28 and represented as flattened grayscale values in a CSV dataset. [Download here](https://www.kaggle.com/datasets/sachinpatel21/az-handwritten-alphabets-in-csv-format). Open a terminal and run `make char-model` to save the weights of the model. It may take a few minutes, and it should reach up to 96% accuracy.
 1. Handwritten Digit Recognition: (not completed)
 1. Handwritten Word Recognition: (not completed)
 1. House Number Recognition: (not completed)
