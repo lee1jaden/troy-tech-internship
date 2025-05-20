@@ -21,9 +21,7 @@ def main():
     model.compile(
         optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"]
     )
-    model.fit(
-        train_images, utils.to_categorical(train_labels), epochs=5, batch_size=128
-    )
+    model.fit(train_images, utils.to_categorical(train_labels), epochs=5, batch_size=32)
     model.summary()
     model.save("./models/digits.keras")
 
