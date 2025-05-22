@@ -32,5 +32,22 @@ def main():
     plt.savefig("./examples/letters.png")
 
 
+def frequency_distrubition():
+    print("Reading data...")
+    data = pd.read_csv("./data/A_Z Handwritten Data.csv").astype("int")
+    labels = data["0"]
+    letters = [index_to_letter(i) for i in range(26)]
+    counts = labels.value_counts(sort=False).values
+
+    print("Making chart...")
+    plt.figure()
+    plt.bar(letters, counts, color="skyblue")
+    plt.xlabel("Letter")
+    plt.ylabel("Count")
+    plt.title("Frequencies of Letters in Dataset")
+    plt.grid()
+    plt.savefig("./examples/letters-distribution.png")
+
+
 if __name__ == "__main__":
     main()

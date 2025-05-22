@@ -35,5 +35,22 @@ def main():
     plt.savefig("./examples/digits.png")
 
 
+def frequency_distrubition():
+    print("Reading data...")
+    (train_images, train_labels), (test_images, test_labels) = mnist.load_data()
+    labels = pd.Series(np.concatenate([train_labels, test_labels]))
+    letters = [index_to_digit(i) for i in range(10)]
+    counts = labels.value_counts(sort=False).values
+
+    print("Making chart...")
+    plt.figure()
+    plt.bar(letters, counts, color="skyblue")
+    plt.xlabel("Digit")
+    plt.ylabel("Count")
+    plt.title("Frequencies of Digit in Dataset")
+    plt.grid()
+    plt.savefig("./examples/digits-distribution.png")
+
+
 if __name__ == "__main__":
     main()
