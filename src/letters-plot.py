@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import cv2
 from keras import models
 import matplotlib.pyplot as plt
 from matplotlib.axes import Axes
@@ -49,5 +50,48 @@ def frequency_distrubition():
     plt.savefig("./examples/letters-distribution.png")
 
 
+def predict_image():
+    print("Processing image")
+    image = cv2.imread("./data/handwritten_letter.jpg")
+
+    processed_image = image.copy()
+    processed_image = cv2.GaussianBlur(processed_image, (5, 5), 0)
+    processed_image = cv2.cvtColor(processed_image, cv2.COLOR_BGR2GRAY)
+    # _, processed_image = cv2.threshold(processed_image, 100, 255, cv2.THRESH_BINARY_INV)
+    cv2.imwrite("./examples/processed_image.png", processed_image)
+
+    img_final = cv2.resize(img_thresh, (28, 28))
+    # img_final = np.reshape(img_final, (1, 28, 28, 1))
+
+    # model: models.Sequential = models.load_model("./models/letters.keras")
+    # prediction = index_to_letter(np.argmax(model.predict(img_final)))
+    # image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    # image = cv2.resize(image, (400, 440))
+
+    # cv2.putText(
+    #     image,
+    #     "Dataflair _ _ _ ",
+    #     (20, 25),
+    #     cv2.FONT_HERSHEY_TRIPLEX,
+    #     0.7,
+    #     color=(0, 0, 230),
+    # )
+    # cv2.putText(
+    #     image,
+    #     "Prediction: " + img_pred,
+    #     (20, 410),
+    #     cv2.FONT_HERSHEY_DUPLEX,
+    #     1.3,
+    #     color=(255, 0, 30),
+    # )
+    # cv2.imshow("Dataflair handwritten character recognition _ _ _ ", image)
+
+    # while 1:
+    #     k = cv2.waitKey(1) & 0xFF
+    #     if k == 27:
+    #         break
+    # cv2.destroyAllWindows()
+
+
 if __name__ == "__main__":
-    main()
+    predict_image()
