@@ -28,6 +28,12 @@ examples/characters.png: src/characters-plot.py models/characters.keras
 models/characters.keras: src/characters.py
 	python3 src/characters.py
 
+examples/houses.png: src/houses-plot.py models/houses.keras
+	python3 src/houses-plot.py
+
+models/houses.keras: src/houses.py
+	python3 src/houses.py
+
 clean-examples:
 	rm -fr examples/*
 
