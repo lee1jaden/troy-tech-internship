@@ -26,7 +26,7 @@ def format_image(image):
 
 def main():
     print("Processing image...")
-    image = cv2.imread("./data/my_handwriting/namebirthday.jpg")
+    image = cv2.imread("./data/namebirthday.jpg")
     processed_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     processed_image = cv2.GaussianBlur(processed_image, (5, 5), cv2.BORDER_CONSTANT)
     processed_image = cv2.threshold(processed_image, 105, 255, 0)[1]
